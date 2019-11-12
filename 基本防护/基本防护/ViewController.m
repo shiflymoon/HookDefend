@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+__weak ViewController *wkSelf = nil;
 @interface ViewController ()
 
 @end
@@ -20,11 +21,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    wkSelf = self;
     
 }
 
 - (IBAction)btnClick1:(id)sender {
-    NSLog(@"按钮1调用了!");
+    NSLog(@"按钮1调用了!:%@",wkSelf);
     
 }
 - (IBAction)btnClick2:(id)sender {
